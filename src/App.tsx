@@ -1,26 +1,62 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { ChromePicker } from 'react-color'
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css'
+
+interface IProps {
+  title: string
 }
 
-export default App;
+interface IState {
+  displayColorPicker: boolean
+  background: string
+}
+
+class App extends React.Component<IProps, IState> {
+  state = {
+    displayColorPicker: false,
+    background: '#fff'
+  }
+
+  handleClick = () => {
+    this.setState({ displayColorPicker: !this.state.displayColorPicker })
+  }
+
+  handleClose = () => {
+    this.setState({ displayColorPicker: false })
+  }
+
+  handleChange = (color: any) => {
+    if (color) {
+      this.setState({ background: color.hex })
+    }
+  }
+
+  render() {
+    const popover: any = {
+      position: 'absolute',
+      zIndex: '2',
+    }
+    const cover: any = {
+      position: 'fixed',
+      top: '0px',
+      right: '0px',
+      bottom: '0px',
+      left: '0px',
+    }
+
+    return (
+      <div style={{background: this.state.background}}>
+        <button onClick={ this.handleClick }>Pick Color</button>
+        {this.state.displayColorPicker ? (
+          <div style={ popover }>
+            <div style={ cover } onClick={ this.handleClose }/>
+            <ChromePicker onChangeComplete={this.handleChange}/>
+          </div>
+        ) : null }
+      </div>
+    )
+  }
+}
+
+export default App
