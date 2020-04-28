@@ -2483,6 +2483,10 @@ crypto-browserify@^3.11.0:
     randombytes "^2.0.0"
     randomfill "^1.0.3"
 
+crypto-js@^3.1.9-1:
+  version "3.3.0"
+  resolved "https://npm.laiye.com/crypto-js/-/crypto-js-3.3.0.tgz#846dd1cce2f68aacfa156c8578f926a609b7976b"
+
 css-blank-pseudo@^0.1.4:
   version "0.1.4"
   resolved "http://npm.laiye.com/css-blank-pseudo/-/css-blank-pseudo-0.1.4.tgz#dfdefd3254bf8a82027993674ccf35483bfcb3c5"
@@ -3042,6 +3046,10 @@ es-to-primitive@^1.2.0:
     is-callable "^1.1.4"
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
+
+es6-promise@^4.2.8:
+  version "4.2.8"
+  resolved "https://npm.laiye.com/es6-promise/-/es6-promise-4.2.8.tgz#4eb21594c972bc40553d276e510539143db53e0a"
 
 escape-html@~1.0.3:
   version "1.0.3"
@@ -4050,6 +4058,10 @@ icss-utils@^4.1.0:
   resolved "http://npm.laiye.com/icss-utils/-/icss-utils-4.1.0.tgz#339dbbffb9f8729a243b701e1c29d4cc58c52f0e"
   dependencies:
     postcss "^7.0.14"
+
+idb-managed@^1.0.7:
+  version "1.0.8"
+  resolved "https://npm.laiye.com/idb-managed/-/idb-managed-1.0.8.tgz#469a222cc9aa4c1fe865b564d6e125ef7fe13328"
 
 identity-obj-proxy@3.0.0:
   version "3.0.0"
@@ -5173,6 +5185,14 @@ lodash.uniq@^4.5.0:
 lodash@^4.0.1:
   version "4.17.15"
   resolved "https://npm.laiye.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
+
+logan-web@1.0.4:
+  version "1.0.4"
+  resolved "https://npm.laiye.com/logan-web/-/logan-web-1.0.4.tgz#a7689ec23654a40ec755125001dea94bb91297b7"
+  dependencies:
+    crypto-js "^3.1.9-1"
+    es6-promise "^4.2.8"
+    idb-managed "^1.0.7"
 
 loglevel@^1.4.1:
   version "1.6.1"
@@ -6714,7 +6734,7 @@ prompts@^2.0.1:
     kleur "^3.0.2"
     sisteransi "^1.0.0"
 
-prop-types@^15.5.10, prop-types@^15.6.2:
+prop-types@15, prop-types@^15.5.10, prop-types@^15.6.2:
   version "15.7.2"
   resolved "http://npm.laiye.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   dependencies:
@@ -6921,6 +6941,12 @@ react-error-overlay@^5.1.6:
 react-is@^16.8.1, react-is@^16.8.4:
   version "16.8.6"
   resolved "http://npm.laiye.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
+
+react-list@0.8.13:
+  version "0.8.13"
+  resolved "https://npm.laiye.com/react-list/-/react-list-0.8.13.tgz#6947d41cccbcca5a8399d5f7822e2a9796f85b70"
+  dependencies:
+    prop-types "15"
 
 react-scripts@3.0.1:
   version "3.0.1"
